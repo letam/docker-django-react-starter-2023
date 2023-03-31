@@ -20,6 +20,8 @@ SECRET_KEY = os.getenv("SECRET_KEY", None)
 
 DEBUG = bool(strtobool(os.getenv("DEBUG", "false")))
 
+DEBUG_PROPAGATE_EXCEPTIONS = bool(strtobool(os.getenv("DEBUG_PROPAGATE_EXCEPTIONS", "false")))
+
 # https://docs.djangoproject.com/en/4.1/ref/settings/#std:setting-ALLOWED_HOSTS
 allowed_hosts = os.getenv("ALLOWED_HOSTS", ".localhost,127.0.0.1,[::1]")
 ALLOWED_HOSTS = list(map(str.strip, allowed_hosts.split(",")))
