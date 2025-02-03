@@ -1,6 +1,6 @@
 FROM node:18.15.0-bullseye-slim AS assets
 LABEL maintainer="Tam Le <tamsgit@gmail.com>"
-LABEL original_maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
+# [original] LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app/assets
 
@@ -37,7 +37,7 @@ CMD ["bash"]
 
 FROM python:3.11.2-slim-bullseye AS app
 LABEL maintainer="Tam Le <tamsgit@gmail.com>"
-LABEL original_maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
+# [original] LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app
 
